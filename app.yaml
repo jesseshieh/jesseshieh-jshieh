@@ -28,6 +28,10 @@ handlers:
 - url: /contact
   script: main.py
 
+# taskqueue tasks
+- url: /tasks/email/me
+  script: main.py
+
 # default catch-all
 - url: .*
   script: main.py

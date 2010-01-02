@@ -20,6 +20,17 @@
         background:#211c1e url('/images/bg1.png') repeat scroll 0 0;
         text-align:center;
       }
+      .flash, .error {
+        background-color:#00aa00;
+        padding:7px 0;
+        text-align:center;
+        font-weight:bold;
+        color:#fff;
+      }
+      .error {
+        background-color:#ff0000;
+        color:#fff;
+      }
       table {
         width:700px;
         height:100%;
@@ -44,6 +55,11 @@
         margin-top:0;
         padding-top:.67em;
       }
+      h2 {
+        font-weight:normal;
+        font-size:125%;
+        text-align:center;
+      }
       .nav {
         width:493px;
         margin:0 auto;
@@ -55,7 +71,7 @@
       }
       .nav ul li {
         display:inline;
-        margin-left:10px;
+        margin-right:10px;
       }
       .nav ul li a {
         color:#ccc;
@@ -64,16 +80,10 @@
       .nav ul li a:hover {
         text-decoration:underline;
       }
-      .jesse-janice-walking {
-        border:20px solid #000;
-        border-bottom:0px;
-        width:453px;
+      .main-body {
+        width:493px;
         margin:0 auto;
-        background-color:#000;
-      }
-      .caption {
-        color:#ccc;
-        line-height:3em;
+        text-align:left;
       }
       .footer {
         font-size:77%;
@@ -83,6 +93,16 @@
     </style>
   </head>
   <body>
+    {% if flash %}
+    <div class="flash">
+      {{ flash }}
+    </div>
+    {% endif %}
+    {% if error %}
+    <div class="error">
+      {{ error }}
+    </div>
+    {% endif %}
     <table cellpadding="0" cellspacing="0">
       <tr>
         <td class="lhs-shadow">
