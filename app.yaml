@@ -4,5 +4,24 @@ runtime: python
 api_version: 1
 
 handlers:
+
+# static directories
+- url: /stylesheets
+  static_dir: stylesheets
+- url: /javascript
+  static_dir: javascript
+- url: /images
+  static_dir: images
+
+# static files
+- url: /favicon.ico
+  static_files: images/favicon.ico
+  upload: images/favicon.ico
+
+# pages
+- url: /
+  script: main.py
+
+# default catch-all
 - url: .*
   script: main.py
