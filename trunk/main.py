@@ -14,8 +14,18 @@ class BaseHandler(webapp.RequestHandler):
     "meta_keywords": "Jesse Shieh"
     }
 
+  def add_template_value(self, key, value):
+    """
+    adds a new entry in the template dictionary
+    """
+    self.template_values[key] = value
+
   def render(self, template_name):
-    path = os.path.join(os.path.dirname(__file__), template_name)
+    """
+    renders and writes the response given the template name
+    """
+    self.add_template_value("template_name", template_name)
+    path = os.path.join(os.path.dirname(__file__), "chrome.html")
     self.response.out.write(template.render(path, self.template_values))
 
 class MainHandler(BaseHandler):
