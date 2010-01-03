@@ -166,11 +166,10 @@ class EmailMeWorker(BaseHandler):
     message = self.request.get('message')
 
     logging.debug("sending message from %s (%s): %s" % (name, email, message))
-    mail.send_mail(sender="%s <%s>" % (name, email),
-                   to="jesse.shieh.pub+contactme@gmail.com",
-                   subject="Message from %s" % name,
-                   body=message,
-                   html=message)
+    mail.send_mail(sender="jesse.shieh@gmail.com",
+                   to="jesse.shieh@gmail.com",
+                   subject="Message from %s (%s)" % (name, email),
+                   body="%s (%s): %s" % (name, email, message))
 
 def main():
   logging.getLogger().setLevel(logging.DEBUG)
