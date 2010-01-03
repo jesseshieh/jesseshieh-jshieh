@@ -12,6 +12,8 @@ handlers:
   static_dir: javascript
 - url: /images
   static_dir: images
+- url: /pub
+  static_dir: pub
 
 # static files
 - url: /favicon.ico
