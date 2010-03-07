@@ -4,14 +4,18 @@
           </h2>
           <form method="POST">
             <style>
+              .form-body {
+                text-align:left;
+                width:300px;
+                margin:0 auto;
+              }
               label {
                 display:block;
                 margin-bottom:3px;
               }
               input, textarea {
                 font-family:verdana;
-                font-size:100%;
-                width:100%;
+                width:300px;
                 padding:5px 3px 3px 5px;
                 margin-bottom:1em;
               }
@@ -20,11 +24,11 @@
                 height:40px;
               }
             </style>
-            <label>Name</label>
-            <input name="name"/>
-            <label>Email</label>
-            <input name="email"/>
-            <label>Message</label>
-            <textarea name="message" rows="8"> </textarea>
-            <button type="submit" name="send">Send Message &raquo;</button>
+            <div class="form-body">
+              <label>Name</label>
+              <input name="name"/>
+              <label>Message <span style="font-size:65%">(Include your contact info so I can reply)</span></label>
+              <textarea name="message" rows="8"> </textarea>
+              <button type="submit" name="send">Send Message &raquo;</button>
+            </div>
           </form>
