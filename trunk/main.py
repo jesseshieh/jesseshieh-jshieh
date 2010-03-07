@@ -14,8 +14,8 @@ from google.appengine.ext.webapp import util
 class BaseHandler(webapp.RequestHandler):
   template_values = {
     "title": "Jesse Shieh",
-    "meta_description": "Stalking Jesse Shieh? Try jesseshieh.com",
-    "meta_keywords": "Jesse Shieh"
+    "meta_description": "Looking for Jesse Shieh? Try jesseshieh.com",
+    "meta_keywords": "Jesse Shieh, Resume, Software Engineer, Engineering Manager"
     }
 
   def add_template_value(self, key, value):
@@ -156,7 +156,7 @@ class ContactHandler(BaseHandler):
         })
     task.add('email-throttle')
 
-    self.add_flash("Thanks %s.  Message sent." % self.html_escape(name))
+    self.add_flash("Thanks %s.  Message sent. I promise to reply within 24 hours." % self.html_escape(name))
     self.redirect("/contact")
 
 class EmailMeWorker(BaseHandler):
