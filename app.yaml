@@ -14,11 +14,16 @@ handlers:
   static_dir: images
 - url: /pub
   static_dir: pub
+- url: /tennis-score-keeper
+  static_dir: tennis-score-keeper
 
 # static files
 - url: /favicon.ico
   static_files: images/favicon.ico
   upload: images/favicon.ico
+- url: /tennis-score-keeper
+  static_files: tennis-score-keeper/index.html
+  upload: tennis-score-keeper/index.html
 
 # pages
 - url: /
