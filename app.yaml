@@ -30,8 +30,8 @@ handlers:
   script: main.py
 - url: /resume
   script: main.py
-- url: /projects
-  script: main.py
+#- url: /projects
+  #script: main.py
 - url: /contact
   script: main.py
 
